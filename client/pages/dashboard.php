@@ -68,20 +68,23 @@ $result = $conn->query($sql);
 <body>
     <nav>
         <h1>Admin Panel</h1>
-        <button>Logout <i class="fa-solid fa-right-from-bracket"></i></button>
+        <button><a href="../index.html">Logout <i class="fa-solid fa-right-from-bracket"></a></i></button>
     </nav>
 
     <div class="main">
         <div class="sidebar" id="sidebar">
             <ul>
-                <li>Media</li>
+                <li><a href="dashboard.php">Media</a></li>
                 <li>Gallery</li>
                 <li>Annual Report</li>
                 <li>Awards</li>
             </ul>
         </div>
         <div class="content">
-            <h2>Media List</h2>
+            <div class="header">
+                <h2>Media List</h2>
+                <button><a href="add-media.html">Add Media</a></button>
+            </div>
             <table>
                 <tr>
                     <th>Title</th>
@@ -97,8 +100,8 @@ $result = $conn->query($sql);
                                 <td>{$row['name']}</td>
                                 <td>{$row['date']}</td>
                                 <td>
-                                    <a href='edit-media.php?id={$row['id']}' class='btn edit-btn'>Edit</a>
-                                    <a href='delete-media.php?id={$row['id']}' class='btn delete-btn' onclick='return confirm(\"Are you sure you want to delete this record?\")'>Delete</a>
+                                    <a href='add-media.html?id={$row['id']}' class='btn edit-btn'>Edit</a>
+                                    <a href='../../server/media-delete.php?id={$row['id']}' class='btn delete-btn' onclick='return confirm(\"Are you sure you want to delete this record?\")'>Delete</a>
                                 </td>
                               </tr>";
                     }

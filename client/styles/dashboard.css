@@ -133,3 +133,27 @@ form button {
     font-size: 1rem;
     cursor: pointer;
 }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header button {
+    padding: 7px 13px;
+    font-size: 1rem;
+    background-color: #7E02B4;
+    border: none;
+    border-radius: 5px;
+}
+
+.header button a {
+    text-decoration: none;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}

@@ -1,6 +1,6 @@
 console.log("working");
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("../client/js/navbar.html")
+    fetch("js/navbar.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("navbar-container").innerHTML = data;
