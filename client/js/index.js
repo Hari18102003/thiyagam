@@ -1,16 +1,3 @@
-const dropdown = document.querySelector('.res');
-const resLinks = document.querySelector('.res-links');
-
-dropdown.addEventListener('click', (event) => {
-    resLinks.style.display = resLinks.style.display === 'block' ? 'none' : 'block';
-});
-
-document.addEventListener('click', (event) => {
-    if (!dropdown.contains(event.target)) {
-        resLinks.style.display = 'none';
-    }
-});
-
 let slideIndex = 1;
 showSlides(slideIndex);
 

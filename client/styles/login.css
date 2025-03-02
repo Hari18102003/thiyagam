@@ -1,0 +1,68 @@
+/* Reset default styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #7E02B4;
+    /* Background color as per your request */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the login form */
+.login-container {
+    background-color: white;
+    /* Second color combination */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    color: #7E02B4;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+label {
+    text-align: left;
+    font-weight: bold;
+    color: #7E02B4;
+    margin-bottom: 5px;
+}
+
+/* Input field styling */
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #7E02B4;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button styling */
+button {
+    background-color: #7E02B4;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #5B0287;
+}
