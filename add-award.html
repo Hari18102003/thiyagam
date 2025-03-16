@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiyagam - Admin Portal</title>
+    <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+
+<body>
+    <nav>
+        <h1>Admin Panel</h1>
+        <button><a href="index.html">Logout <i class="fa-solid fa-right-from-bracket"></a></i></button>
+    </nav>
+    <div class="main">
+        <div class="sidebar" id="sidebar">
+            <ul>
+                <li><a href="dashboard.php">Media</a></li>
+                <li><a href="gallery.php">Gallery</a></li>
+                <li><a href="annualreport.php">Annual Report</a></li>
+                <li><a href="award.php">Awards</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1 id="form-title">Add Award</h1>
+            <form id="media-form" action="admin/award-upload.php" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="id" id="media-id"> <!-- Hidden input for editing -->
+
+                <div>
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title" required>
+                </div>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div>
+                    <label for="date">Date</label>
+                    <input type="date" name="date" id="date" required>
+                </div>
+                <div>
+                    <label for="image">Upload Image</label>
+                    <input type="file" name="image" id="image" accept="image/png, image/jpeg, image/jpg, image/gif">
+                    <p id="existing-image"></p> <!-- Show existing image when editing -->
+                </div>
+                <div class="form-btn">
+                    <button type="submit" id="submit-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/4373bbb4a8.js" crossorigin="anonymous"></script>
+    <script>
+        // Get URL parameters
+        const params = new URLSearchParams(window.location.search);
+        const mediaId = params.get('id');
+
+        if (mediaId) {
+            // If ID exists, switch to Edit Mode
+            document.getElementById('form-title').innerText = "Edit Media";
+            document.getElementById('submit-btn').innerText = "Update Media";
+            document.getElementById('media-form').action = "admin/award-edit.php";
+
+            // Fetch existing media details from the server
+            fetch(`admin/get-award.php?id=${mediaId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data) {
+                        document.getElementById('media-id').value = data.id;
+                        document.getElementById('title').value = data.title;
+                        document.getElementById('name').value = data.name;
+                        document.getElementById('date').value = data.date;
+                        console.log(data.image)
+                        if (data.image) {
+                            document.getElementById('existing-image').innerHTML = `Current Image: <img src="admin/${data.image}" width="100">`;
+                        }
+                    }
+                })
+                .catch(error => console.error('Error fetching media data:', error));
+        }
+    </script>
+</body>
+
+</html>

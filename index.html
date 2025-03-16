@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Thiyagam</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+    <!-- Banner -->
+    <section>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="images/banner-3.jpg">
+                <div class="overlay"></div>
+                <!-- <div class="text">Caption Text</div> -->
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/banner-2.jpg">
+                <div class="overlay"></div>
+                <!-- <div class="text">Caption Two</div> -->
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/banner-4.jpg">
+                <div class="overlay"></div>
+                <!-- <div class="text">Caption Three</div> -->
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+    <!-- About -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div>
+                <img src="images/about.jpg" />
+            </div>
+            <div class="abt-msg">
+                <p class="hidden-text">
+                    <span class="highlight">Thiyagam Women Trust</span> is registered under the Charitable Trust Act,
+                    (Regd No.900/06)
+                    established to
+                    serve the physically
+                    challenged women for their all round development with a touch of loving care and concern.
+
+                    The Trust is mainly focusing on the rural women with disabilities and empowers them to stand on
+                    their own legs. We
+                    create opportunities for self employment and provide environment to take up the challenges of life
+                    in an optimistic way
+                    with determination. We believe that the attitude of Positive ness coupled with a heart of abundance
+                    is the key to joyful
+                    life.
+
+                    We inculcate the attitude of gratitude in all our efforts and counsel the challenged women to count
+                    their blessings and
+                    happily share it with others.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Founder -->
+    <section class="founder-section">
+        <div class="founder">
+            <div>
+                <p class="founder-msg">
+                    At Thiyagam Women Trust, we empower rural women with disabilities to stand on their own feet. Since
+                    2005, we've been
+                    providing hope and support, thanks to the individuals and institutions who have supported us on this
+                    journey.
+                </p>
+                <br />
+                <div class="sign">
+                    <p><span>Ms. S J Amutha Santhy</span></p>
+                    <p><span>Founder</span></p>
+                </div>
+            </div>
+            <div>
+                <img src="images/amuthasanthi.jpg" alt="Founder" />
+            </div>
+        </div>
+    </section>
+    <!-- Activities -->
+    <section class="activities-section">
+        <h1>Activities</h1>
+        <div class="activities slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="images/tailor.jpg" alt="Image 1">
+                    <p class="caption">Tailoring Unit</p>
+                </div>
+                <div class="slide">
+                    <img style="width: 100%;height: 300px;" src="images/cc.jpg" alt="Image 2">
+                    <p class="caption">Computer Centre</p>
+                </div>
+                <div class="slide">
+                    <img style="width: 100%;height: 300px;" src="images/stayhome.jpg" alt="Image 3">
+                    <p class="caption">Stay Home</p>
+                </div>
+                <div class="slide">
+                    <img style="width: 100%;height: 300px;" src="images/counselling.jpg" alt="Image 4">
+                    <p class="caption">Counselling</p>
+                </div>
+                <div class="slide">
+                    <img style="width: 100%;height: 300px;" src="images/tuition.jpg" alt="Image 1">
+                    <p class="caption">tuition centres
+                    </p>
+                </div>
+                <div class="slide">
+                    <img style="width: 100%;height: 300px;" src="images/selfhelp.jpg" alt="Image 2">
+                    <p class="caption">Self Help Groups</p>
+                </div>
+                <div class="slide">
+                    <img style="width: 100%;height: 300px;" src="images/counselling.jpg" alt="Image 3">
+                    <p class="caption">Cultural Team</p>
+                </div>
+                <div class="slide">
+                    <img style="width: 100%;height: 300px;" src="images/friendcircle.jpg" alt="Image 4">
+                    <p class="caption">Friends Circle</p>
+                </div>
+                <div class="slide">
+                    <img style="width: 100%;height: 300px;" src="images/activity.webp" alt="Image 1">
+                    <p class="caption">Tree Planting</p>
+                </div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">Prev</button>
+            <button class="next" onclick="moveSlide(1)">Next</button>
+        </div>
+
+
+    </section>
+    <!-- contact -->
+    <section id="contact" class="contact-container">
+        <div class="contact">
+            <div>
+                <h2>Contact Us</h2>
+                <p><a href="mailto:challengedwomen@gmail.com"><i
+                            class="fa-solid fa-envelope"></i><span>challengedwomen@gmail.com</span></a></p>
+                <p><i class="fa-solid fa-phone"></i><span>0452 - 2602195, +91 - 9629625517</span></p>
+                <p><i class="fa-brands fa-whatsapp"></i><span>+91 - 7092590095</span></p>
+            </div>
+            <div>
+                <h2>Follow Us</h2>
+                <div>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a href=""><i class="fa-solid fa-rss"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="copy">Copyright © 2004-2017 thiyagam.org . All Rights Reserved. Privacy Policy.</p>
+    </section>
+    <script src="https://kit.fontawesome.com/4373bbb4a8.js" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+    <script src="js/navbarLoader.js"></script>
+</body>
+
+</html>
